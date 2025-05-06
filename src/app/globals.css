@@ -1,26 +1,106 @@
 @import "tailwindcss";
 
+@theme {
+  /* Custom colors */
+  --color-primary: #2563eb;
+  /* Blue */
+  --color-secondary: #10b981;
+  /* Green */
+  --color-dark: #1e293b;
+  --color-light: #f8fafc;
+
+  /* Custom animations */
+  --animate-fadeIn: fadeIn 1s ease-in forwards;
+  --animate-expand: expand 1.5s ease-out forwards;
+  --animate-slideUp: slideUp 0.8s ease-out forwards;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite;
+  --animate-scaleIn: scaleIn 0.5s ease-out forwards;
+
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes expand {
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+    }
+
+    50% {
+      box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+    }
+  }
+
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Force background color on the whole document */
+html,
+body {
+  background-color: #ffffff;
+  min-height: 100vh;
 }
