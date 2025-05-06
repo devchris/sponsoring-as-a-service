@@ -14,10 +14,10 @@ export default function Hero() {
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <div className="inline-block animate-fadeIn">
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-            Marketing für Unternehmen.<br />
-            Einnahmen für Vereine.<br />
+            Vereine brauchen Kapital.<br />
+            Unternehmen suchen Sichtbarkeit.<br />
             <span className="text-primary relative">
-              Ohne Umwege.
+              Wir verbinden beides.
               <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary animate-expand"></span>
             </span>
           </h1>
